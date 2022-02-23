@@ -1,3 +1,6 @@
+<?php
+include(Functions.php)
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
