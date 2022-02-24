@@ -11,6 +11,6 @@ include("includes/Functions.php");
     <title>Document</title>
 </head>
 <body>
-    
+
 </body>
 </html>
