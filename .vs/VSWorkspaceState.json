@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\includes"
   ],
-  "SelectedNode": "\\week.php",
+  "SelectedNode": "\\add_employee.php",
   "PreviewInSolutionExplorer": false
 }
