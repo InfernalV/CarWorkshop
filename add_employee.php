@@ -1,5 +1,7 @@
 <?php
 include("includes/Functions.php");
+adduser($conn);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +13,21 @@ include("includes/Functions.php");
     <title>Document</title>
 </head>
 <body>
-    
+<form class="" action="add_employee.php" method="post">
+    <form action="/">
+        <div class="mb-3 mt-3">
+            <label for="username" class="form-label">username:</label>
+            <input type="username" class="form-control" id="username" placeholder="Enter username" name="username">
+        </div>
+        <div class="mb-3">
+            <label for="pwd" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
+        </div>
+        <div class="form-check mb-3">
+            <label class="form-check-label"></label>
+        </div>
+        <button type="submit" class="btn btn-primary">add</button>
+    </form>
+    <a href="employee.php"<input type="submit"/>Employee
 </body>
 </html>

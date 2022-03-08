@@ -11,6 +11,7 @@ include("includes/Functions.php");
     <title>Document</title>
 </head>
 <body>
-
+<a href="nav.php"<input type="submit"/>Nav
+<a href="week.php"<input type="submit"/>Week
 </body>
 </html>

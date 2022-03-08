@@ -1,5 +1,5 @@
 <?php
-include(Functions.php)
+include("includes/Functions.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +11,9 @@ include(Functions.php)
     <title>Document</title>
 </head>
 <body>
-    
+<a href="forum.php"<input type="submit"/>Forum
+<a href="task.php"<input type="submit"/>Task
+<a href="employee.php"<input type="submit"/>Employee
+<a href="week.php"<input type="submit"/>Week
 </body>
 </html>

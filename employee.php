@@ -1,5 +1,6 @@
 <?php
-include(Functions.php)
+include("includes/Functions.php")
+//Hello World this stupid system works!
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +12,7 @@ include(Functions.php)
     <title>Document</title>
 </head>
 <body>
-    
+<a href="nav.php"<input type="submit"/>Nav
+<a href="add_employee.php"<input type="submit"/>Add
 </body>
 </html>

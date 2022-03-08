@@ -1,5 +1,5 @@
 <?php
-include(Functions.php)
+include("includes/Functions.php")
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +11,7 @@ include(Functions.php)
     <title>Document</title>
 </head>
 <body>
-    
+<a href="nav.php"<input type="submit"/>Nav
+<a href="task.php"<input type="submit"/>Task
 </body>
 </html>
