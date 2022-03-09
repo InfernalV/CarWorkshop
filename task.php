@@ -11,6 +11,9 @@ include("includes/Functions.php")
     <title>Document</title>
 </head>
 <body>
+    <div>
+        <?php show_work_base($conn) ?>
+    </div>
 <a href="nav.php"<input type="submit"/>Nav
 <a href="insert_info.php"<input type="submit"/>Insert_Info
 </body>

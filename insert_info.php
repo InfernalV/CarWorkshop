@@ -1,5 +1,6 @@
 <?php
 include("includes/Functions.php");
+add_time($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +12,23 @@ include("includes/Functions.php");
     <title>Document</title>
 </head>
 <body>
+<form class="" action="insert_info.php" method="post">
+    <div>
+        <select class="form-select" id="sel1" name="sellist1">
+        <option>-----select day-----</option>
+        <?php days($conn) ?>
+    </select>
+    </div>
+</form>
+<form class="" action="insert_info.php" method="post">
+    <div>
+        <select class="form-select" id="sel1" name="sellist1">
+            <option>-----select time-----</option>
+            <?php times($conn) ?>
+        </select>
+    </div>
+</form>
+
 <a href="nav.php"<input type="submit"/>Nav
 <a href="week.php"<input type="submit"/>Week
 </body>

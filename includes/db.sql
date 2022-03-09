@@ -44,63 +44,6 @@ insert into day (id, day) VALUES(0,'wednesday');
 insert into day (id, day) VALUES(0,'thursday');
 insert into day (id, day) VALUES(0,'Friday');
 
-CREATE TABLE week (
-                       id int(11) auto_increment primary key,
-                       week varchar(20)
-);
-insert into week (id, week) VALUES(0,'week 1');
-insert into week (id, week) VALUES(0,'week 2');
-insert into week (id, week) VALUES(0,'week 3');
-insert into week (id, week) VALUES(0,'week 4');
-insert into week (id, week) VALUES(0,'week 5');
-insert into week (id, week) VALUES(0,'week 6');
-insert into week (id, week) VALUES(0,'week 7');
-insert into week (id, week) VALUES(0,'week 8');
-insert into week (id, week) VALUES(0,'week 9');
-insert into week (id, week) VALUES(0,'week 10');
-insert into week (id, week) VALUES(0,'week 11');
-insert into week (id, week) VALUES(0,'week 12');
-insert into week (id, week) VALUES(0,'week 13');
-insert into week (id, week) VALUES(0,'week 14');
-insert into week (id, week) VALUES(0,'week 15');
-insert into week (id, week) VALUES(0,'week 16');
-insert into week (id, week) VALUES(0,'week 17');
-insert into week (id, week) VALUES(0,'week 18');
-insert into week (id, week) VALUES(0,'week 19');
-insert into week (id, week) VALUES(0,'week 20');
-insert into week (id, week) VALUES(0,'week 21');
-insert into week (id, week) VALUES(0,'week 22');
-insert into week (id, week) VALUES(0,'week 23');
-insert into week (id, week) VALUES(0,'week 24');
-insert into week (id, week) VALUES(0,'week 25');
-insert into week (id, week) VALUES(0,'week 26');
-insert into week (id, week) VALUES(0,'week 27');
-insert into week (id, week) VALUES(0,'week 28');
-insert into week (id, week) VALUES(0,'week 29');
-insert into week (id, week) VALUES(0,'week 30');
-insert into week (id, week) VALUES(0,'week 31');
-insert into week (id, week) VALUES(0,'week 32');
-insert into week (id, week) VALUES(0,'week 33');
-insert into week (id, week) VALUES(0,'week 34');
-insert into week (id, week) VALUES(0,'week 35');
-insert into week (id, week) VALUES(0,'week 36');
-insert into week (id, week) VALUES(0,'week 37');
-insert into week (id, week) VALUES(0,'week 38');
-insert into week (id, week) VALUES(0,'week 39');
-insert into week (id, week) VALUES(0,'week 40');
-insert into week (id, week) VALUES(0,'week 41');
-insert into week (id, week) VALUES(0,'week 42');
-insert into week (id, week) VALUES(0,'week 43');
-insert into week (id, week) VALUES(0,'week 44');
-insert into week (id, week) VALUES(0,'week 45');
-insert into week (id, week) VALUES(0,'week 46');
-insert into week (id, week) VALUES(0,'week 47');
-insert into week (id, week) VALUES(0,'week 48');
-insert into week (id, week) VALUES(0,'week 49');
-insert into week (id, week) VALUES(0,'week 50');
-insert into week (id, week) VALUES(0,'week 51');
-insert into week (id, week) VALUES(0,'week 52');
-
 CREATE TABLE work_type (
                        id int(11) auto_increment primary key,
                        work varchar(20)
@@ -110,3 +53,4 @@ insert into work_type (id, work) VALUES(0,'Kleine Beurt');
 insert into work_type (id, work) VALUES(0,'Groote Beurt');
 insert into work_type (id, work) VALUES(0,'Reparatie');
 
+insert into customer (id, name_project, name_client, task, employee, description, comm, week, "day", "time") values(0, 'car', 'Bob', 'APK', 'Jeff', 'broke', 'oh no', 'week', 'monday', '10:00');

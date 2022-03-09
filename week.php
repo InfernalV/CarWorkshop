@@ -11,6 +11,21 @@ include("includes/Functions.php")
     <title>Document</title>
 </head>
 <body>
+    <div>
+        <?php show_work_mo($conn); ?>
+    </div>
+<div>
+    <?php show_work_te($conn); ?>
+</div>
+    <div>
+        <?php show_work_we($conn); ?>
+    </div>
+<div>
+    <?php show_work_th($conn); ?>
+</div>
+    <div>
+        <?php show_work_fr($conn); ?>
+    </div>
 <a href="nav.php"<input type="submit"/>Nav
 </body>
 </html>
