@@ -11,9 +11,15 @@ include("includes/Functions.php");
     <title>Document</title>
 </head>
 <body>
-<a href="forum.php"<input type="submit"/>Forum
-<a href="task.php"<input type="submit"/>Task
-<a href="employee.php"<input type="submit"/>Employee
-<a href="week.php"<input type="submit"/>Week
+<ul>
+    <li><a href="forum.php"<input type="submit"/>Forum</a></li>
+    <li><a href="task.php"<input type="submit"/>Task</a></li>
+    <li><a href="employee.php"<input type="submit"/>Employee</a></li>
+    <li><a href="week.php"<input type="submit"/>Week</a></li>
+</ul>
 </body>
 </html>
+<!--<a href="forum.php"<input type="submit"/>Forum-->
+<!--<a href="task.php"<input type="submit"/>Task-->
+<!--<a href="employee.php"<input type="submit"/>Employee-->
+<!--<a href="week.php"<input type="submit"/>Week-->
