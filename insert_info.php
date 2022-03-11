@@ -15,23 +15,19 @@ add_time($conn);
 <body>
 <form class="" action="insert_info.php" method="post">
     <div class="day">
-        <select class="form-select" id="sel1" name="sellist1">
+        <label for="sel1"></label><select class="form-select" id="sel1" name="day">
         <option>-----select day-----</option>
         <?php days($conn) ?>
     </select>
     </div>
-</form>
-<form class="" action="insert_info.php" method="post">
     <div class="time">
-        <select class="form-select" id="sel1" name="sellist1">
+        <select class="form-select" id="sel1" name="time">
             <option>-----select time-----</option>
             <?php times($conn) ?>
         </select>
     </div>
-</form>
-<form class="" action="insert_info.php" method="post">
     <div class="SubmitInf">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
     </div>
 </form>
 

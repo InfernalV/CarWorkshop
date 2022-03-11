@@ -11,13 +11,14 @@
             $comm = $_POST['comm'];
 
 
-            $sql = "Insert into customer (name_project, name_client, task, description, comm) VALUES()";
+            $sql = "Insert into customer (name_project, name_client, task, description, comm)values(:name_project, :name_client, :task, :description, :comm)";
             $stmt = $conn->prepare($sql);
             if(!$stmt){
-                header("Location: forum.php");
+                header("Location: forum.php!");
                 exit();
             } else {
                 $stmt->execute(['name_project' => $name_project, 'name_client' => $name_client,'task' => $task, 'description' => $description,'comm' => $comm]);
+                header("location: forum.php?add=project");
             }
         }
     }
@@ -45,17 +46,22 @@
     }
 
     function add_time($conn){
+        $id = $_GET['id'];
         if(isset($_POST["submit"])) {
             $time = $_POST['time'];
             $day = $_POST['day'];
-            $id = $_GET['id'];
 
-            $sql = "UPDATE customer SET day = :day, time = :time WHERE id = '" .$id. "'";
+
+                echo "<p>$id</p>";
+
+            $sql = "UPDATE customer SET :day = :day, :time = :customer WHERE id = '" .$id. "'";
             $stmt = $conn ->prepare($sql);
             if(!$stmt){
+                header("Location: forum.php!");
                 exit();
             } else {
-                $stmt->execute(['time' => $time, 'day' => $day,]);
+                $stmt->execute(['time' => $time, 'day' => $day]);
+
             }
         }
     }
@@ -218,13 +224,13 @@
             echo "</option>";
         }
     }
-    function worktype($conn){
+    function work_type($conn){
         $query = "SELECT * FROM work_type";
         $result = $conn->query($query);
 
         foreach ($result as $work){
             echo "<option>";
-            echo ($work['work_type']);
+            echo ($work['work']);
             echo "</option>";
         }
     }

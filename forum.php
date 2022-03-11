@@ -16,14 +16,35 @@ work_detail($conn);
 <form method="post" action="forum.php">
     <div class="">
         <label for="name_project" class="form-label">project name:</label>
-        <input type="name_project" class="form-control" id="name_project" placeholder="Enter name of the project" name="name_project">
+        <input type="text" class="form-control" id="name_project" placeholder="Enter name of the project" name="name_project">
     </div>
     <div class="mb-3">
         <label for="name_client" class="form-label">Client:</label>
-        <input type="name_client" class="form-control" id="name_client" placeholder="Enter Client name" name="name_client">
+        <input type="text" class="form-control" id="name_client" placeholder="Enter Client name" name="name_client">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
+        <div>
+            <label for="sel1"></label><select class="form-select" id="sel1" name="task">
+                <option>-----select work type-----</option>
+                <?php work_type($conn) ?>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">description:</label>
+            <input type="text" class="form-control" id="description" placeholder="Enter the description" name="description">
+        </div>
+
+
+        <div class="mb-3">
+            <label for="comm" class="form-label">comment:</label>
+            <input type="text" class="form-control" id="comm" placeholder="Enter client comment" name="comm">
+        </div>
+        <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+    </form>
+
+
+
 <a href="nav.php"<input type="submit"/>Nav
 <a href="task.php"<input type="submit"/>Task
 </body>
