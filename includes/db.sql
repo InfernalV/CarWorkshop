@@ -2,7 +2,8 @@ CREATE TABLE employee (
     id int(11) auto_increment primary key,
     name varchar(25),
     password varchar(30),
-    work_type varchar (30)
+    work_type varchar (30),
+    img)
 );
 CREATE TABLE customer(
     id int(11) auto_increment primary key,

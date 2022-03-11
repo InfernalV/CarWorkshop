@@ -6,9 +6,19 @@
             $name_project = $_POST['name_project'];
             $name_client = $_POST['name_client'];
             $task = $_POST['task'];
-            $employee = $_POST['employee'];
+//            $employee = $_POST['employee'];
             $description = $_POST['description'];
             $comm = $_POST['comm'];
+
+
+            $sql = "Insert into customer (name_project, name_client, task, description, comm) VALUES()";
+            $stmt = $conn->prepare($sql);
+            if(!$stmt){
+                header("Location: forum.php");
+                exit();
+            } else {
+                $stmt->execute(['name_project' => $name_project, 'name_client' => $name_client,'task' => $task, 'description' => $description,'comm' => $comm]);
+            }
         }
     }
 
@@ -37,16 +47,15 @@
     function add_time($conn){
         if(isset($_POST["submit"])) {
             $time = $_POST['time'];
-            $day = $_POST['date'];
-            $week = $_POST["user"];
+            $day = $_POST['day'];
             $id = $_GET['id'];
 
-            $sql = "UPDATE customer SET week = :week, day = :day, time = :time WHERE id = '" .$id. "'";
+            $sql = "UPDATE customer SET day = :day, time = :time WHERE id = '" .$id. "'";
             $stmt = $conn ->prepare($sql);
             if(!$stmt){
                 exit();
             } else {
-                $stmt->execute(['time' => $time, 'day' => $day, 'week'=> $week,]);
+                $stmt->execute(['time' => $time, 'day' => $day,]);
             }
         }
     }
@@ -59,8 +68,8 @@
             $name_client = $row['name_client'];
             $task = $row['task'];
             $employee = $row['employee'];
-            $description = $row['description'];
-            $comm = $row['comm'];
+//            $description = $row['description'];
+//            $comm = $row['comm'];
             $day = $row['day'];
             $time = $row['time'];
 
@@ -69,8 +78,8 @@
             echo"<p>$name_client</p>";
             echo"<p>$task</p>";
             echo"<p>$employee</p>";
-            echo"<p>$description</p>";
-            echo"<p>$comm</p>";
+//            echo"<p>$description</p>";
+//            echo"<p>$comm</p>";
             echo"<p>$day</p>";
             echo"<p>$time</p>";
             echo"</div>";
@@ -86,8 +95,8 @@
             $name_client = $row['name_client'];
             $task = $row['task'];
             $employee = $row['employee'];
-            $description = $row['description'];
-            $comm = $row['comm'];
+//            $description = $row['description'];
+//            $comm = $row['comm'];
             $day = $row['day'];
             $time = $row['time'];
 
@@ -96,8 +105,8 @@
             echo"<p>$name_client</p>";
             echo"<p>$task</p>";
             echo"<p>$employee</p>";
-            echo"<p>$description</p>";
-            echo"<p>$comm</p>";
+//            echo"<p>$description</p>";
+//            echo"<p>$comm</p>";
             echo"<p>$day</p>";
             echo"<p>$time</p>";
             echo"</div>";
@@ -113,8 +122,8 @@
             $name_client = $row['name_client'];
             $task = $row['task'];
             $employee = $row['employee'];
-            $description = $row['description'];
-            $comm = $row['comm'];
+//            $description = $row['description'];
+//            $comm = $row['comm'];
             $day = $row['day'];
             $time = $row['time'];
             echo"<div id='wednesday'>";
@@ -122,8 +131,8 @@
             echo"<p>$name_client</p>";
             echo"<p>$task</p>";
             echo"<p>$employee</p>";
-            echo"<p>$description</p>";
-            echo"<p>$comm</p>";
+//            echo"<p>$description</p>";
+//            echo"<p>$comm</p>";
             echo"<p>$day</p>";
             echo"<p>$time</p>";
             echo"</div>";
@@ -139,8 +148,8 @@
             $name_client = $row['name_client'];
             $task = $row['task'];
             $employee = $row['employee'];
-            $description = $row['description'];
-            $comm = $row['comm'];
+//            $description = $row['description'];
+//            $comm = $row['comm'];
             $day = $row['day'];
             $time = $row['time'];
 
@@ -149,8 +158,8 @@
             echo"<p>$name_client</p>";
             echo"<p>$task</p>";
             echo"<p>$employee</p>";
-            echo"<p>$description</p>";
-            echo"<p>$comm</p>";
+//            echo"<p>$description</p>";
+//            echo"<p>$comm</p>";
             echo"<p>$day</p>";
             echo"<p>$time</p>";
             echo"</div>";
@@ -166,8 +175,8 @@
             $name_client = $row['name_client'];
             $task = $row['task'];
             $employee = $row['employee'];
-            $description = $row['description'];
-            $comm = $row['comm'];
+//            $description = $row['description'];
+//            $comm = $row['comm'];
             $day = $row['day'];
             $time = $row['time'];
 
@@ -176,8 +185,8 @@
             echo"<p>$name_client</p>";
             echo"<p>$task</p>";
             echo"<p>$employee</p>";
-            echo"<p>$description</p>";
-            echo"<p>$comm</p>";
+//            echo"<p>$description</p>";
+//            echo"<p>$comm</p>";
             echo"<p>$day</p>";
             echo"<p>$time</p>";
             echo"</div>";
@@ -214,11 +223,9 @@
         $result = $conn->query($query);
 
         foreach ($result as $work){
-            echo "<select class='form-select'>";
             echo "<option>";
             echo ($work['work_type']);
             echo "</option>";
-            echo "</select>";
         }
     }
 
