@@ -4,181 +4,153 @@ body {
     background-size: 100%;
     background-image: url("../Images/Base.png");
 }
-.knopie{
-    margin-top: 20px;
-    background-color: #EC644A;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.lbutton{
-    margin-top: 100px;
-    position: absolute;
-    margin-left: 10px;
-    background-color: #00555C;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.lbutton2{
-    margin-top: 200px;
-    position: absolute;
-    margin-left: 10px;
-    background-color: #00555C;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.lbuttonactive{
-    margin-top: 100px;
-    position: absolute;
-    margin-left: 10px;
-    background-color: darkgreen;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.lbuttonactive2{
-    margin-top: 200px;
-    position: absolute;
-    margin-left: 10px;
-    background-color: darkgreen;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.hbutton{
-    position: absolute;
-    background-color: gray;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.hbutton2{
-    top: 10px;
-    position: absolute;
-    background-color: gray;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-}
-.Username{
-    Margin-top: 180px;
-    Top: 150px;
-    position: center;
+.Logo {
     background-color: transparent;
+    background: no-repeat;
+    background-size: 60%;
     border: none;
-    color: white;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-}
-.Password{
-    Margin-top: 10px;
-    Top: 150px;
-    position: center;
-    background-color: transparent;
-    border: none;
-    color: white;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
+    border-radius: 5px;
+    Margin-Left: 1300px;
+    position: absolute;
 }
 .Remember{
+    width: 250px;
     Margin-top: 10px;
-    Margin-left: 30px;
     Top: 150px;
+    Margin-left: 827px;
     position: center;
     background-color: transparent;
     border: none;
-    color: green;
+    color: black;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
 }
 .Submit{
+    width: 250px;
     Margin-top: 10px;
-    Margin-Right: 30px;
     Top: 150px;
+    Margin-left: 800px;
     position: center;
     background-color: transparent;
     border: none;
-    color: white;
+    color: black;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
 }
 .Add{
+    width: 250px;
     Margin-top: 10px;
-    Margin-Right: 45px;
     Top: 150px;
+    Margin-left: 827px;
     position: center;
     background-color: transparent;
     border: none;
-    color: white;
+    color: black;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
 }
 .day{
-    Margin-top: 180px;
+    width: 250px;
+    Margin-top: 10px;
     Top: 150px;
+    Margin-left: 827px;
     position: center;
     background-color: transparent;
     border: none;
-    color: white;
+    color: black;
     text-align: center;
     font-size: 16px;
-    cursor: pointer;
 }
 .time{
+    width: 250px;
     Margin-top: 10px;
     Top: 150px;
+    Margin-left: 827px;
     position: center;
     background-color: transparent;
     border: none;
-    color: white;
+    color: black;
     text-align: center;
     font-size: 16px;
-    cursor: pointer;
 }
 .SubmitInf{
+    width: 250px;
     Margin-top: 10px;
-    Margin-Right: 105px;
     Top: 150px;
+    Margin-left: 800px;
     position: center;
     background-color: transparent;
     border: none;
-    color: white;
+    color: black;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
 }
+.Nav{
+    width: 280px;
+    height: 500px;
+    Margin-top: 100px;
+    top: 150px;
+    Margin-left: 120px;
+    background-color: rgba(128,128,128, 50%);
+    color: black;
+    text-align: left;
+    font-size: 16px;
+
+}
+.mButton1 {
+    background-color: rgba(255, 255, 255, 70%);
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    margin-right: 40px;
+    margin-left: 10px;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 18px;
+}
+.mButton2 {
+    background-color: rgba(255, 255, 255, 70%);
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    margin-right: 40px;
+    margin-left: 10px;
+    margin-top: 20px;
+    text-align: center;
+    align-content: center;
+    font-size: 18px;
+}
+.forumbox{
+    width: 400px;
+    height: 600px;
+    background-color: rgba(128,128,128, 50%);
+    Margin-top: 80px;
+    color: black;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 10%;}
+.col-4 {width: 80%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
