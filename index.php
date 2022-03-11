@@ -11,7 +11,7 @@ include("includes/Functions.php");
     <title>Document</title>
 </head>
 <body>
-<form action="index.php" method="post">
+<form action="/">
     <div class="mb-3 mt-3">
         <label for="username" class="form-label">username:</label>
         <input type="username" class="form-control" id="username" placeholder="Enter username" name="username">

@@ -1,0 +1,184 @@
+
+body {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("../Images/Base.png");
+}
+.knopie{
+    margin-top: 20px;
+    background-color: #EC644A;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.lbutton{
+    margin-top: 100px;
+    position: absolute;
+    margin-left: 10px;
+    background-color: #00555C;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.lbutton2{
+    margin-top: 200px;
+    position: absolute;
+    margin-left: 10px;
+    background-color: #00555C;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.lbuttonactive{
+    margin-top: 100px;
+    position: absolute;
+    margin-left: 10px;
+    background-color: darkgreen;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.lbuttonactive2{
+    margin-top: 200px;
+    position: absolute;
+    margin-left: 10px;
+    background-color: darkgreen;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hbutton{
+    position: absolute;
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hbutton2{
+    top: 10px;
+    position: absolute;
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.Username{
+    Margin-top: 180px;
+    Top: 150px;
+    position: center;
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.Password{
+    Margin-top: 10px;
+    Top: 150px;
+    position: center;
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.Remember{
+    Margin-top: 10px;
+    Margin-left: 30px;
+    Top: 150px;
+    position: center;
+    background-color: transparent;
+    border: none;
+    color: green;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.Submit{
+    Margin-top: 10px;
+    Margin-Right: 30px;
+    Top: 150px;
+    position: center;
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.Add{
+    Margin-top: 10px;
+    Margin-Right: 45px;
+    Top: 150px;
+    position: center;
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.day{
+    Margin-top: 180px;
+    Top: 150px;
+    position: center;
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.time{
+    Margin-top: 10px;
+    Top: 150px;
+    position: center;
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.SubmitInf{
+    Margin-top: 10px;
+    Margin-Right: 105px;
+    Top: 150px;
+    position: center;
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
