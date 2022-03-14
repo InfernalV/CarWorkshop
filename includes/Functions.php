@@ -6,7 +6,6 @@
             $name_project = $_POST['name_project'];
             $name_client = $_POST['name_client'];
             $task = $_POST['task'];
-//            $employee = $_POST['employee'];
             $description = $_POST['description'];
             $comm = $_POST['comm'];
 
@@ -24,7 +23,7 @@
     }
 
     function show_work_base($conn){
-        $sql = "SELECT * FROM customer";
+        $sql = "SELECT * FROM customer WHERE day IS NULL";
         $result = $conn->query($sql);
 
         while ($row = $result->fetch(PDO::FETCH_ASSOC)){
@@ -36,7 +35,8 @@
             $description = $row['description'];
             $comm = $row['comm'];
 
-            echo"<p id='id_wp'><a href='./insert_info.php?id=$id'>$name_project</a></p>"; // ../ of (/file.[html/php,ect])
+            echo"<p id='id_wp'><a href='./insert_info.php?id=$id'>$id</a></p>";
+            echo"<p id='np_wp'>$name_project</></p>";
             echo"<p id='nc_wp'>$name_client</p>";
             echo"<p id='ta_wp'>$task</p>";
             echo"<p id='em_wp'>$employee</p>";
@@ -46,15 +46,13 @@
     }
 
     function add_time($conn){
-        $id = $_GET['id'];
+
         if(isset($_POST["submit"])) {
+            $id = $_GET['id'];
             $time = $_POST['time'];
             $day = $_POST['day'];
 
-
-                echo "<p>$id</p>";
-
-            $sql = "UPDATE customer SET :day = :day, :time = :customer WHERE id = '" .$id. "'";
+            $sql = "UPDATE customer SET day = :day, time = :time WHERE id = '" .$id. "'";
             $stmt = $conn ->prepare($sql);
             if(!$stmt){
                 header("Location: forum.php!");
@@ -201,7 +199,11 @@
 
 
     function adduser($conn){
-
+        if(isset($_POST['submit'])) {
+            $name = $_POST['name'];
+            $password = $_POST['password'];
+            $confirm = $_POST['confirm'];
+        }
     }
 
     function times($conn){

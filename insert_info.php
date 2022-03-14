@@ -13,7 +13,7 @@ add_time($conn);
     <title>Document</title>
 </head>
 <body>
-<form class="" action="insert_info.php" method="post">
+<form class="" action="insert_info.php?id=<?php echo $_GET['id']; ?>" method="post">
     <div class="day">
         <label for="sel1"></label><select class="form-select" id="sel1" name="day">
         <option>-----select day-----</option>
