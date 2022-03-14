@@ -6,14 +6,24 @@
             $name_project = $_POST['name_project'];
             $name_client = $_POST['name_client'];
             $task = $_POST['task'];
-            $employee = $_POST['employee'];
             $description = $_POST['description'];
             $comm = $_POST['comm'];
+
+
+            $sql = "Insert into customer (name_project, name_client, task, description, comm)values(:name_project, :name_client, :task, :description, :comm)";
+            $stmt = $conn->prepare($sql);
+            if(!$stmt){
+                header("Location: forum.php!");
+                exit();
+            } else {
+                $stmt->execute(['name_project' => $name_project, 'name_client' => $name_client,'task' => $task, 'description' => $description,'comm' => $comm]);
+                header("location: forum.php?add=project");
+            }
         }
     }
 
     function show_work_base($conn){
-        $sql = "SELECT * FROM customer";
+        $sql = "SELECT * FROM customer WHERE day IS NULL";
         $result = $conn->query($sql);
 
         while ($row = $result->fetch(PDO::FETCH_ASSOC)){
@@ -25,7 +35,8 @@
             $description = $row['description'];
             $comm = $row['comm'];
 
-            echo"<p id='id_wp'><a href='./insert_info.php?id=$id'>$name_project</a></p>"; // ../ of (/file.[html/php,ect])
+            echo"<p id='id_wp'><a href='./insert_info.php?id=$id'>$id</a></p>";
+            echo"<p id='np_wp'>$name_project</></p>";
             echo"<p id='nc_wp'>$name_client</p>";
             echo"<p id='ta_wp'>$task</p>";
             echo"<p id='em_wp'>$employee</p>";
@@ -35,18 +46,20 @@
     }
 
     function add_time($conn){
-        if(isset($_POST["submit"])) {
-            $time = $_POST['time'];
-            $day = $_POST['date'];
-            $week = $_POST["user"];
-            $id = $_GET['id'];
 
-            $sql = "UPDATE customer SET week = :week, day = :day, time = :time WHERE id = '" .$id. "'";
+        if(isset($_POST["submit"])) {
+            $id = $_GET['id'];
+            $time = $_POST['time'];
+            $day = $_POST['day'];
+
+            $sql = "UPDATE customer SET day = :day, time = :time WHERE id = '" .$id. "'";
             $stmt = $conn ->prepare($sql);
             if(!$stmt){
+                header("Location: forum.php!");
                 exit();
             } else {
-                $stmt->execute(['time' => $time, 'day' => $day, 'week'=> $week,]);
+                $stmt->execute(['time' => $time, 'day' => $day]);
+
             }
         }
     }
@@ -59,8 +72,8 @@
             $name_client = $row['name_client'];
             $task = $row['task'];
             $employee = $row['employee'];
-            $description = $row['description'];
-            $comm = $row['comm'];
+//            $description = $row['description'];
+//            $comm = $row['comm'];
             $day = $row['day'];
             $time = $row['time'];
 
@@ -69,8 +82,8 @@
             echo"<p>$name_client</p>";
             echo"<p>$task</p>";
             echo"<p>$employee</p>";
-            echo"<p>$description</p>";
-            echo"<p>$comm</p>";
+//            echo"<p>$description</p>";
+//            echo"<p>$comm</p>";
             echo"<p>$day</p>";
             echo"<p>$time</p>";
             echo"</div>";
@@ -86,8 +99,8 @@
             $name_client = $row['name_client'];
             $task = $row['task'];
             $employee = $row['employee'];
-            $description = $row['description'];
-            $comm = $row['comm'];
+//            $description = $row['description'];
+//            $comm = $row['comm'];
             $day = $row['day'];
             $time = $row['time'];
 
@@ -96,8 +109,8 @@
             echo"<p>$name_client</p>";
             echo"<p>$task</p>";
             echo"<p>$employee</p>";
-            echo"<p>$description</p>";
-            echo"<p>$comm</p>";
+//            echo"<p>$description</p>";
+//            echo"<p>$comm</p>";
             echo"<p>$day</p>";
             echo"<p>$time</p>";
             echo"</div>";
@@ -113,8 +126,8 @@
             $name_client = $row['name_client'];
             $task = $row['task'];
             $employee = $row['employee'];
-            $description = $row['description'];
-            $comm = $row['comm'];
+//            $description = $row['description'];
+//            $comm = $row['comm'];
             $day = $row['day'];
             $time = $row['time'];
             echo"<div id='wednesday'>";
@@ -122,8 +135,8 @@
             echo"<p>$name_client</p>";
             echo"<p>$task</p>";
             echo"<p>$employee</p>";
-            echo"<p>$description</p>";
-            echo"<p>$comm</p>";
+//            echo"<p>$description</p>";
+//            echo"<p>$comm</p>";
             echo"<p>$day</p>";
             echo"<p>$time</p>";
             echo"</div>";
@@ -139,8 +152,8 @@
             $name_client = $row['name_client'];
             $task = $row['task'];
             $employee = $row['employee'];
-            $description = $row['description'];
-            $comm = $row['comm'];
+//            $description = $row['description'];
+//            $comm = $row['comm'];
             $day = $row['day'];
             $time = $row['time'];
 
@@ -149,8 +162,8 @@
             echo"<p>$name_client</p>";
             echo"<p>$task</p>";
             echo"<p>$employee</p>";
-            echo"<p>$description</p>";
-            echo"<p>$comm</p>";
+//            echo"<p>$description</p>";
+//            echo"<p>$comm</p>";
             echo"<p>$day</p>";
             echo"<p>$time</p>";
             echo"</div>";
@@ -166,8 +179,8 @@
             $name_client = $row['name_client'];
             $task = $row['task'];
             $employee = $row['employee'];
-            $description = $row['description'];
-            $comm = $row['comm'];
+//            $description = $row['description'];
+//            $comm = $row['comm'];
             $day = $row['day'];
             $time = $row['time'];
 
@@ -176,8 +189,8 @@
             echo"<p>$name_client</p>";
             echo"<p>$task</p>";
             echo"<p>$employee</p>";
-            echo"<p>$description</p>";
-            echo"<p>$comm</p>";
+//            echo"<p>$description</p>";
+//            echo"<p>$comm</p>";
             echo"<p>$day</p>";
             echo"<p>$time</p>";
             echo"</div>";
@@ -186,7 +199,11 @@
 
 
     function adduser($conn){
-
+        if(isset($_POST['submit'])) {
+            $name = $_POST['name'];
+            $password = $_POST['password'];
+            $confirm = $_POST['confirm'];
+        }
     }
 
     function times($conn){
@@ -209,16 +226,14 @@
             echo "</option>";
         }
     }
-    function worktype($conn){
+    function work_type($conn){
         $query = "SELECT * FROM work_type";
         $result = $conn->query($query);
 
         foreach ($result as $work){
-            echo "<select class='form-select'>";
             echo "<option>";
-            echo ($work['work_type']);
+            echo ($work['work']);
             echo "</option>";
-            echo "</select>";
         }
     }
 
